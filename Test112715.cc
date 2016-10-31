@@ -43,32 +43,38 @@ int main() {
 		int operation = 0 ;
 
 		std::cin >> operation ;
-
-		if (operation == 1) {
-			results = sum = input1 + input2 ;
-			std::cout << " sum: " << sum << "\n" ; 
-		}
-
-		else if (operation == 2) {
-			results = difference = input1 - input2 ;
-			std::cout << " difference: " << difference << "\n" ; 
-		}
-
-		else if (operation == 3) {
-			results = product = input1 * input2 ;
-			std::cout << " product: " << product << "\n " ; 
-		}
-
-		else if (operation == 4) {
-
-			if (input2 != 0) {
-				results = quotient = input1 / input2 ;
-				std::cout << " quotient " << quotient << "\n " ; 
-			}
-
-			else {
-				std::cout << " You cannot divide by 0: \n " ; 
-			}		
+		
+		
+		switch(operation) {
+				
+			case 1:
+				results = sum = input1 + input2 ;
+				std::cout << " sum: " << sum << "\n" ;
+				break;
+				
+			case 2:
+				results = difference = input1 - input2 ;
+				std::cout << " dfference: " << difference << "\n" ;
+				break;
+				
+			case 3:
+				results = product = input1 * input2 ;
+				std::cout << " product: " << product << "\n" ;
+				break;
+				
+			case 4:
+				if (input2 != 0){
+					
+					results = quotient = input1/ input2 ;
+					std::cout << " quotient " << quotient << "\n" ;
+					break;
+					
+				} else {
+					
+					std::cout << " You cannot divide by 0: \n ";
+					break;
+					
+				}	
 		}
 
 		if ( (operation < 1) || (operation > 4) ) {
